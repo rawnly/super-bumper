@@ -18,22 +18,22 @@ var rootCmd = &cobra.Command{
 	Long: `A simple CLI to increment semantic version numbers.
 
 Usage:
-  bump [version] [bump-type]    Bump the given version
-  bump [bump-type]              Bump version from manifest or stdin
-  echo "1.0.0" | bump [type]    Bump version from stdin
+  super-bumper [version] [bump-type]    Bump the given version
+  super-bumper [bump-type]              Bump version from manifest or stdin
+  echo "1.0.0" | super-bumper [type]    Bump version from stdin
 
-Bump types:
+super-bumper types:
   major    Increment major version (1.0.0 -> 2.0.0)
   minor    Increment minor version (1.0.0 -> 1.1.0)
   patch    Increment patch version (1.0.0 -> 1.0.1) [default]
 
 Examples:
-  bump 1.0.0 patch              # Output: 1.0.1
-  bump 1.0.0 minor              # Output: 1.1.0
-  bump 1.0.0 major              # Output: 2.0.0
-  bump 1.0.0                    # Output: 1.0.1 (default: patch)
-  echo "2.3.4" | bump minor     # Output: 2.4.0
-  bump patch                    # Reads version from package.json/composer.json/Cargo.toml`,
+  super-bumper 1.0.0 patch              # Output: 1.0.1
+  super-bumper 1.0.0 minor              # Output: 1.1.0
+  super-bumper 1.0.0 major              # Output: 2.0.0
+  super-bumper 1.0.0                    # Output: 1.0.1 (default: patch)
+  echo "2.3.4" | super-bumper minor     # Output: 2.4.0
+  super-bumper patch                    # Reads version from package.json/composer.json/Cargo.toml`,
 	Version:      version,
 	SilenceUsage: true,
 	RunE:         run,
