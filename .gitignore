@@ -1,1 +1,3 @@
 super-bumper
+# Added by goreleaser init:
+dist/
